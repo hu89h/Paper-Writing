@@ -1,0 +1,6 @@
+# Local-only materials and caches.
+/.local/
+__pycache__/
+.cache/
+*.tmp
+resources/logs/

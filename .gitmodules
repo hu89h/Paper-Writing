@@ -1,0 +1,92 @@
+[submodule "third_party/Master-cai/Research-Paper-Writing-Skills"]
+	path = third_party/Master-cai/Research-Paper-Writing-Skills
+	url = https://github.com/Master-cai/Research-Paper-Writing-Skills.git
+	shallow = true
+[submodule "third_party/appautomaton/latex-arxiv-SKILL"]
+	path = third_party/appautomaton/latex-arxiv-SKILL
+	url = https://github.com/appautomaton/latex-arxiv-SKILL.git
+	shallow = true
+[submodule "third_party/yunshenwuchuxun/latex-paper-skills"]
+	path = third_party/yunshenwuchuxun/latex-paper-skills
+	url = https://github.com/yunshenwuchuxun/latex-paper-skills.git
+	shallow = true
+[submodule "third_party/WenyuChiou/academic-writing-skills"]
+	path = third_party/WenyuChiou/academic-writing-skills
+	url = https://github.com/WenyuChiou/academic-writing-skills.git
+	shallow = true
+[submodule "third_party/K-Dense-AI/claude-scientific-writer"]
+	path = third_party/K-Dense-AI/claude-scientific-writer
+	url = https://github.com/K-Dense-AI/claude-scientific-writer.git
+	shallow = true
+[submodule "third_party/ShaishavMaisuria/research-paper-lifecycle-skills"]
+	path = third_party/ShaishavMaisuria/research-paper-lifecycle-skills
+	url = https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills.git
+	shallow = true
+[submodule "third_party/jin-s13/ai-research-writing-skill"]
+	path = third_party/jin-s13/ai-research-writing-skill
+	url = https://github.com/jin-s13/ai-research-writing-skill.git
+	shallow = true
+[submodule "third_party/PoseZhaoyutao/research-paper-writer-skill"]
+	path = third_party/PoseZhaoyutao/research-paper-writer-skill
+	url = https://github.com/PoseZhaoyutao/research-paper-writer-skill.git
+	shallow = true
+[submodule "third_party/Rezenders/scientific_writing_agent"]
+	path = third_party/Rezenders/scientific_writing_agent
+	url = https://github.com/Rezenders/scientific_writing_agent.git
+	shallow = true
+[submodule "third_party/Hiro-Inagawa/paper-audit-skill"]
+	path = third_party/Hiro-Inagawa/paper-audit-skill
+	url = https://github.com/Hiro-Inagawa/paper-audit-skill.git
+	shallow = true
+[submodule "third_party/Odinary-AI/research-writing-skill"]
+	path = third_party/Odinary-AI/research-writing-skill
+	url = https://github.com/Odinary-AI/research-writing-skill.git
+	shallow = true
+[submodule "third_party/brycewang-stanford/Auto-Empirical-Research-Skills"]
+	path = third_party/brycewang-stanford/Auto-Empirical-Research-Skills
+	url = https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git
+	shallow = true
+[submodule "third_party/Yuan1z0825/nature-skills"]
+	path = third_party/Yuan1z0825/nature-skills
+	url = https://github.com/Yuan1z0825/nature-skills.git
+	shallow = true
+[submodule "third_party/wanshuiyin/Auto-claude-code-research-in-sleep"]
+	path = third_party/wanshuiyin/Auto-claude-code-research-in-sleep
+	url = https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git
+	shallow = true
+[submodule "third_party/mikubaka88/CCFA-Skills"]
+	path = third_party/mikubaka88/CCFA-Skills
+	url = https://github.com/mikubaka88/CCFA-Skills.git
+	shallow = true
+[submodule "third_party/Orchestra-Research/AI-Research-SKILLs"]
+	path = third_party/Orchestra-Research/AI-Research-SKILLs
+	url = https://github.com/Orchestra-Research/AI-Research-SKILLs.git
+	shallow = true
+[submodule "third_party/Galaxy-Dawn/claude-scholar"]
+	path = third_party/Galaxy-Dawn/claude-scholar
+	url = https://github.com/Galaxy-Dawn/claude-scholar.git
+	shallow = true
+[submodule "third_party/zLanqing/codex-claude-academic-skills"]
+	path = third_party/zLanqing/codex-claude-academic-skills
+	url = https://github.com/zLanqing/codex-claude-academic-skills.git
+	shallow = true
+[submodule "third_party/Norman-bury/research-writing-skill"]
+	path = third_party/Norman-bury/research-writing-skill
+	url = https://github.com/Norman-bury/research-writing-skill.git
+	shallow = true
+[submodule "third_party/Haojae/scipilot-figure-skill"]
+	path = third_party/Haojae/scipilot-figure-skill
+	url = https://github.com/Haojae/scipilot-figure-skill.git
+	shallow = true
+[submodule "third_party/WUBING2023/PaperSpine"]
+	path = third_party/WUBING2023/PaperSpine
+	url = https://github.com/WUBING2023/PaperSpine.git
+	shallow = true
+[submodule "third_party/K-Dense-AI/scientific-agent-skills"]
+	path = third_party/K-Dense-AI/scientific-agent-skills
+	url = https://github.com/K-Dense-AI/scientific-agent-skills.git
+	shallow = true
+[submodule "third_party/serenakeyitan/citation-check-skill"]
+	path = third_party/serenakeyitan/citation-check-skill
+	url = https://github.com/serenakeyitan/citation-check-skill.git
+	shallow = true

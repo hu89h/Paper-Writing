@@ -1,0 +1,15 @@
+[
+  {"task":"正文组织与段落改写","repo":"Master-cai/Research-Paper-Writing-Skills","paths":["research-paper-writing/SKILL.md"]},
+  {"task":"写作与完整性审查参考","repo":"mikubaka88/CCFA-Skills","paths":["ccf-paper-writer/SKILL.md","ccf-paper-reviewer/SKILL.md","ccf-integrity-auditor/SKILL.md","ccf-paper-to-exemplar/SKILL.md"]},
+  {"task":"跨学科写作规则","repo":"K-Dense-AI/claude-scientific-writer","paths":["skills/scientific-writing/SKILL.md"]},
+  {"task":"稿件修订与审稿规则","repo":"WenyuChiou/academic-writing-skills","paths":["skills/academic-writing-skills/SKILL.md","skills/paper-review/SKILL.md"]},
+  {"task":"引用、数值、主张与投稿前核验","repo":"ShaishavMaisuria/research-paper-lifecycle-skills","paths":["skills/verify-citations/SKILL.md","skills/verify-results/SKILL.md","skills/verify-claims/SKILL.md","skills/preflight-check/SKILL.md"]},
+  {"task":"数值证据映射","repo":"jin-s13/ai-research-writing-skill","paths":["references/numeric-evidence.md","references/numeric-evidence.schema.json","scripts/check_numeric_evidence.py"]},
+  {"task":"引用锁与构建记录","repo":"jin-s13/ai-research-writing-skill","paths":["scripts/check_citation_lock.py","scripts/verify_citations.py","scripts/record_build.py"]},
+  {"task":"Git diff 增量审稿与论文／实现对照","repo":"Rezenders/scientific_writing_agent","paths":[".agents/skills/diff-review/SKILL.md",".agents/skills/technical-paragraph-rewrite/SKILL.md"]},
+  {"task":"论文精读与参考文献元数据核验","repo":"Yuan1z0825/nature-skills","paths":["skills/nature-paper-xray/SKILL.md","skills/nature-ref-verifier/SKILL.md"]},
+  {"task":"数据图制作与检查","repo":"Haojae/scipilot-figure-skill","paths":["SKILL.md","scripts/profile_data.py","scripts/check_figure.py","scripts/visual_qa.py"]},
+  {"task":"上游自动实验结果的审计交接参考","repo":"wanshuiyin/Auto-claude-code-research-in-sleep","paths":["skills/experiment-audit/SKILL.md","skills/citation-audit/SKILL.md"]},
+  {"task":"引用核查提示词参考","repo":"serenakeyitan/citation-check-skill","paths":["SKILL.md","references/citation_schema.json"]},
+  {"task":"ML 与系统论文写作参考","repo":"Orchestra-Research/AI-Research-SKILLs","paths":["20-ml-paper-writing/ml-paper-writing/SKILL.md","20-ml-paper-writing/systems-paper-writing/SKILL.md"]}
+]
