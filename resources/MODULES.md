@@ -28,4 +28,16 @@
 
 其余范围未通过本次审查；其中默认附加整套报告、通用实证接收判断和 novelty 叙述规则不作为团队标准。
 
+## ai-research-writing-skill
+
+来源：[jin-s13/ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill)。[审查与对比依据](reviews/ai-research-writing-skill.md)。
+
+| 内容入口 | 保留作用 | 保留边界 |
+| --- | --- | --- |
+| [研究交接契约](../third_party/jin-s13/ai-research-writing-skill/references/research-handoff.md)、[schema](../third_party/jin-s13/ai-research-writing-skill/references/research-handoff.schema.json)、[check_research_handoff](../third_party/jin-s13/ai-research-writing-skill/scripts/check_research_handoff.py) | 研究问题、证据文件、定量必需项和未解决项的交接接口与结构检查设计 | 文件非空与 blockers 为空不证明科学正确；不强制采用该 JSON 格式 |
+| [数值来源契约](../third_party/jin-s13/ai-research-writing-skill/references/numeric-evidence.md)、[schema](../third_party/jin-s13/ai-research-writing-skill/references/numeric-evidence.schema.json)、[重算源码](../third_party/jin-s13/ai-research-writing-skill/scripts/check_numeric_evidence.py) | 来源选择、聚合和表示形式，以及 `load_registry` 等来源重算逻辑的设计参考 | 不通过 `find_unverified_numbers` 的完整稿件核验能力：数值未绑定具体指标／方法／稿件位置，扫描覆盖有限 |
+| [产物契约](../third_party/jin-s13/ai-research-writing-skill/references/artifacts.md) 的构建部分与 [record_build](../third_party/jin-s13/ai-research-writing-skill/scripts/record_build.py) | 区分既有 PDF 与实际执行构建，记录命令、日志、返回码及来源状态 | 只保留构建记录设计；依赖收集不完整，Windows 命令兼容性及运行正确性未验证 |
+
+上述脚本共享 [paper_contract.py](../third_party/jin-s13/ai-research-writing-skill/scripts/paper_contract.py)，交接检查还依赖数值登记检查；这些是参考源码的依赖，不是已经启用的工具链。整套写作合同、引用锁、模板与完整质量门禁不随本次通过。
+
 全部已接收材料的定位线索见[接收模块线索](RECEIVED_MODULES.md)，处理历史见[变更记录](CHANGELOG.md)。本表由维护者直接更新。
