@@ -1,6 +1,8 @@
 # 已入库模块
 
-当前仅保留 [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 下列内容，作为写作流程与检查规范参考。这里记录内容价值和边界，接入与实际使用另按任务处理。
+只列通过静态审查的具体内容，作为写作流程与检查规范参考。这里记录内容价值和边界，接入与实际使用另按任务处理。
+
+## CCFA-Skills
 
 | 内容入口 | 保留作用 | 保留边界 |
 | --- | --- | --- |
@@ -14,5 +16,16 @@
 | [ccf-humanization](../third_party/mikubaka88/CCFA-Skills/ccf-humanization/SKILL.md) | 上述模块的共享依赖：保持事实与不确定性，减少空泛表达，避免机械删掉限定语 | 保留证据忠实和上下文判断；破折号数量、句式和作者主语偏好不作为通用质量门槛 |
 
 其余九个 Skill、具体会议指南、LaTeX 模板和未读参考材料不随本次审查通过。未审内容与明确不采用的默认策略分别见[审查记录](reviews/ccfa-skills.md)。上游文件保持原样；保留范围由本表和审查记录限定。
+
+## Research-Paper-Writing-Skills
+
+来源：[Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)。[审查与对比依据](reviews/research-paper-writing-skills.md)。
+
+| 内容入口 | 保留作用 | 保留边界 |
+| --- | --- | --- |
+| [Paragraph Clarity Check](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/SKILL.md#paragraph-clarity-check-important) 与 [flow 参考](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/does-my-writing-flow-source.md) | 读者视角检查术语和衔接；反向列出全文论点、段落主旨与支撑证据，检查对应关系 | 仅保留这一小节及参考方法；第一句主旨等是修订建议，不将全份 Skill 的输出规则一起采用 |
+| [Method 指南](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/method.md) 与 [overview 模板](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/examples/method/overview-template.md) | 模块化方法的分步起草、动机／设计／优势检查，overview 的设置与章节导航示例 | 与 CCFA 有覆盖重合，保留操作粒度与示例；适用 ML/CV 等模块化方法，示例科研事实和引用不可直接复用 |
+
+其余范围未通过本次审查；其中默认附加整套报告、通用实证接收判断和 novelty 叙述规则不作为团队标准。
 
 全部已接收材料的定位线索见[接收模块线索](RECEIVED_MODULES.md)，处理历史见[变更记录](CHANGELOG.md)。本表由维护者直接更新。
