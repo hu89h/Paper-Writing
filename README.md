@@ -4,7 +4,7 @@
 
 ## 资料入口
 
-- [资源入库与维护工作流](workflows/resource-curation/WORKFLOW.md)：搜集、静态质量检查、入库及后续删改的工作约定。
+- [仓库接收、审查与维护工作流](workflows/resource-curation/WORKFLOW.md)：接收已提供的仓库，检查自身质量和现有重合，决定是否保留并登记作用。
 - [资源变更记录](resources/CHANGELOG.md)：入库、修改、删除、排除和恢复的原因与依据。
 - [资源分类索引](resources/CATALOG.md)：23 个仓库的用途与入口。
 - [重点模块索引](resources/MODULES.md)：写作、数值证据、引用核验、增量审稿、绘图等具体文件位置。
