@@ -55,7 +55,7 @@ def main():
              f'收集范围：{len(repos)} 个上游仓库。文件列表来自本地源码；来源链接已通过 GitHub API 和实际克隆核对。', '',
              '分类和用途是导航摘要，不构成功能效果排名。`SKILL.md` 数量是跟踪文件数，可能包含重复打包的同一 Skill，不等于独立能力数量。', '',
              '上游链接与完整文件清单见 [repositories.json](repositories.json)。', '',
-             '此页由脚本生成，只记录已接收材料；正式保留范围见 [已入库资源](CATALOG.md)，处理历史见 [资源变更记录](CHANGELOG.md)。未入库材料的当前状态以变更记录中最新有效结论为准；没有有效结论的资源为待审候选。', '']
+             '此页由脚本生成，只记录已接收材料；保留范围见 [入库目录](CATALOG.md) 链接的各库说明，删除或排除依据见 [原因表](CHANGELOG.md)。未入库且没有处理结论的材料为待审候选。', '']
     for title, entries in groups.items():
         if not entries:
             continue
@@ -72,7 +72,7 @@ def main():
     (ROOT / 'resources/RECEIVED.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
     modules = json.loads((ROOT / 'resources/modules.json').read_text(encoding='utf-8'))
     lines = ['# 已接收材料的模块线索', '',
-             '以下入口仅核对本地文件存在，供定位待审内容，不表示已入库。通过审查的内容与边界见 [已入库模块](MODULES.md)，处理历史见 [资源变更记录](CHANGELOG.md)。', '',
+             '以下入口仅核对本地文件存在，不表示已入库。保留内容与边界见 [入库目录](CATALOG.md) 链接的各库说明，删除或排除依据见 [原因表](CHANGELOG.md)。', '',
              '脚本入口只提供定位；运行前阅读其输入约定、依赖与副作用。引用元数据核验与“原文是否支持当前主张”是不同任务，需分别验证。', '']
     for module in modules:
         item = repos[module['repo']]

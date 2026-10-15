@@ -1,16 +1,9 @@
-# 资源变更记录
+# 资源删改与排除原因
 
-记录实际发生的入库、修改、删除、排除、暂缓和恢复。按时间追加，保留旧记录。
+保留影响资源选择的有效理由，供再次收到同一来源时查阅。当前入库内容见各资源说明；普通入库、文件移动和检查过程由 Git 记录。
 
-新增资源前先查本表。对于曾删除或排除的资源，核对原原因；有新的保留依据时重新检查，并追加恢复或重新入库记录。
+删改或重新考虑时更新对应条目。恢复资源时保留原删除或排除原因，并补充情况变化及恢复依据；过程历史可从 Git 查阅。
 
-删除时说明具体原因，必要时注明重合或替代资源，以及重新考虑的条件。这里保留的是维护决策，不要求保留被删除资源的完整内容。
-
-| 日期 | 资源名称及来源链接 | 操作 | 说明／原因 | 依据或替代资源 |
-| --- | --- | --- | --- | --- |
-| 2026-10-15 | [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 排除 | 不作为通用论文引文核验资源保留：数值规则过严且存在规则冲突，schema 未覆盖正文状态；核心核查思路与已有内容重合。从重点模块入口移除，原始仓库仍作为已接收材料保留。 | [静态审查及对照依据](reviews/citation-check-skill.md)。上游协调规则、补齐 schema 并提供明确增量后可重新审查。 |
-| 2026-10-15 | [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 撤销排除，恢复待审 | 上条决定将未入库候选作为已有覆盖，比较基准不成立。保留原始质量发现供后续核查，恢复接收材料的入口线索；此次不作正式质量判定，也不入库。 | [原分析及当前状态](reviews/citation-check-skill.md)。原排除记录保留，但不再有效。 |
-| 2026-10-15 | [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) | 首次入库，部分保留 | 作为首个入库资源，保留六个写作相关模块的流程规范和两个共享依赖的适用规则。价值在于写作与审查分工、证据映射、范例提炼和返修闭环；不整体采用其科研框架。当前无已入库比较对象，重合检查不适用。 | [审查依据与排除边界](reviews/ccfa-skills.md)、[入库模块](MODULES.md)。模板、具体投稿政策及其余模块不随本次通过；未运行或启用候选资源。 |
-| 2026-10-15 | [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) | 入库，部分保留 | 对照已入库 CCFA，保留读者检查、反向提纲及 Method 分步组织与 overview 示例，补充具体操作参考；不整体采用其执行／输出合同、实证接收判断和 novelty 叙述默认。 | [静态审查及比较](reviews/research-paper-writing-skills.md)、[保留内容](MODULES.md#research-paper-writing-skills)。同类内容已被更清晰材料覆盖时可缩减，不将其视为新增整套写作能力。 |
-| 2026-10-15 | [jin-s13/ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill) | 入库，部分保留 | 对照已入库 CCFA 与 Master-cai，只保留研究交接、数值来源重算、构建记录的契约与实现参考；不整体通过稿件自动核验。数值扫描只做集合匹配，没有方法／指标／位置绑定。 | [静态审查与反例](reviews/ai-research-writing-skill.md)、[保留内容及依赖](MODULES.md#ai-research-writing-skill)。扩大到工具采用前需解决语义归属、覆盖及 Windows 兼容性问题；此次未运行。 |
-| 2026-10-15 | [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 正式排除 | 在待审状态重新核对：方法事实被排除在提取范围外，数值与来源判定规则存在问题，正文状态与 schema 枚举缺少映射；这些核心质量问题足以独立支持不保留。此次以实际已入库范围比较，没有将未审候选当替代。 | [重新静态审查及条件](reviews/citation-check-skill.md)。协调规则、补齐论文接口或提供可独立保留的专项价值后可复查；原件留在接收清单，未运行。 |
+| 资源及来源 | 当前决定 | 原因 | 重新考虑的条件 |
+| --- | --- | --- | --- |
+| [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 不入库；原件保留在接收材料中 | `SKILL.md` 的 Claim Extraction Rules 排除方法事实；Numerical Precision Rules 与来源判定规则缺少合理统一的处理方式，两个二手来源是否可通过的指示相互冲突；正文多种状态在 `references/citation_schema.json` 中没有明确映射。核心规则与接口问题足以支持排除，不以完全重复为理由 | 协调来源与数值规则，明确论文适用范围，补齐状态映射；或提供有明确价值、可独立保留的专项内容 |
