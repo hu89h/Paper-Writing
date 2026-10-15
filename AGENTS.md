@@ -18,6 +18,6 @@
 - 质量检查只做静态分析，不实际运行候选资源。完成一次完整维护后，将相关修改和记录一并提交到本地 Git，不捎带无关改动。
 - `third_party/` 使用 Git submodule 管理上游资源；不要在资源整理任务中直接修改上游源码。
 - 入库细节集中在各自的 `resources/<作者>/<库名>.md`，说明当前作用、保留内容、依据与限制；`resources/CATALOG.md` 只做导航，不另建逐次审查报告或模块总表。待审候选不作为已有入库资源参与重合判断。
-- `resources/repositories.json` 和 `resources/modules.json` 是已接收材料的脚本输入。变更后重新生成 `resources/RECEIVED.md` 与 `resources/RECEIVED_MODULES.md`，并运行 `scripts/verify_resources.py`；生成脚本不改写入库记录。
+- `resources/RECEIVED.md` 与 `resources/RECEIVED_MODULES.md` 是直接维护的接收目录和内容线索；用 Git 和文件工具核对来源、实际变更及链接。
 - 下载资源不等于启用 Skill。根据实际任务选择模块，再阅读其规则和依赖。
 - Windows 环境使用 PowerShell；文本使用 UTF-8 编码。

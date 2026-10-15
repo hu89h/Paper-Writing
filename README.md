@@ -9,7 +9,6 @@
 - `resources/<作者>/<库名>.md`：对应资源的作用、保留内容、判断依据与限制。
 - [资源删改与排除原因](resources/CHANGELOG.md)：影响资源选择的有效原因及重新考虑条件。
 - [已接收仓库](resources/RECEIVED.md)与[模块线索](resources/RECEIVED_MODULES.md)：下载材料的导航，不代表入库。
-- [机器可读接收清单](resources/repositories.json)：上游 URL、获取状态及全部 `SKILL.md` 路径。
 - `third_party/<owner>/<repo>`：以 Git submodule 管理的上游源码。
 
 入库范围以对应资源说明为准，不表示运行效果已验证或 Skill 已启用。未入库且没有处理结论的材料为待审候选。
@@ -38,20 +37,12 @@ git submodule update --init --depth 1 -- third_party/Master-cai/Research-Paper-W
 ```powershell
 git -C third_party/Master-cai/Research-Paper-Writing-Skills fetch --depth 1 origin main
 git -C third_party/Master-cai/Research-Paper-Writing-Skills checkout --detach FETCH_HEAD
-python -X utf8 scripts/collect_resources.py --offline --register-submodules
-python -X utf8 scripts/build_catalog.py
-git add -- .gitmodules third_party/Master-cai/Research-Paper-Writing-Skills resources
+git add -- third_party/Master-cai/Research-Paper-Writing-Skills resources
 ```
 
-上游更新后，按维护工作流复查受影响的内容，必要时修改入库范围及原因记录，再提交实际 diff。收集脚本以公开资源清单为输入，补齐缺少的仓库并记录现有 checkout，不自动升级已有资源。`--offline` 只检查本地资源；省略该选项可刷新 GitHub 元数据并获取缺少的仓库。
+上游更新后，按维护工作流复查受影响的内容，必要时修改入库范围及原因记录，再提交实际 diff。
 
-`build_catalog.py` 只生成 `RECEIVED.md` 和 `RECEIVED_MODULES.md`。各资源说明、`CATALOG.md` 及 `CHANGELOG.md` 直接维护，修改过程由 Git 记录；两个 JSON 文件记录已接收材料，不承担入库状态管理。
-
-```powershell
-python -X utf8 scripts/verify_resources.py
-```
-
-该检查核对 Git submodule、工作区状态和模块入口存在性，不运行第三方代码。
+接收目录、各资源说明和删改原因直接维护，修改过程由 Git 记录。Agent 使用 Git 和文件工具核对 submodule、来源、工作区状态及链接。
 
 ## 资源使用
 
