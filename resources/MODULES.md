@@ -1,95 +1,18 @@
-# 重点模块入口
+# 已入库模块
 
-以下模块入口已核对本地文件存在。是否通过静态审查及保留范围见 [资源变更记录](CHANGELOG.md)；没有记录的条目视为待审查。本索引不表示功能或实际效果已经验证。
+当前仅保留 [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 下列内容，作为写作流程与检查规范参考。这里记录内容价值和边界，接入与实际使用另按任务处理。
 
-脚本入口只提供定位；运行前阅读其输入约定、依赖与副作用。引用元数据核验与“原文是否支持当前主张”是不同任务，需分别验证。
+| 内容入口 | 保留作用 | 保留边界 |
+| --- | --- | --- |
+| [ccf-paper-writer](../third_party/mikubaka88/CCFA-Skills/ccf-paper-writer/SKILL.md) | 分节写作、局部修改与压缩；保留原有事实、数值、引用键和用户格式，缺证据处明确待补 | 保留论证组织与证据约束；不采用未知投稿目标时回退 NeurIPS 的默认策略，不将章节篇幅或措辞偏好作为通用标准 |
+| [ccf-paper-reviewer](../third_party/mikubaka88/CCFA-Skills/ccf-paper-reviewer/SKILL.md) | 将写作检查与科学审查分开；问题带位置、依据、反证复核与解决条件 | 固定报告结构是可参考的输出设计；模拟视角与分数不代表真实独立评审或接收概率 |
+| [ccf-integrity-auditor](../third_party/mikubaka88/CCFA-Skills/ccf-integrity-auditor/SKILL.md) | 主张—证据映射，数值及口径一致性，书目身份与引用上下文支持分别核对 | 保留审计流程；实际覆盖率、检索准确率及判定可靠性未验证 |
+| [ccf-paper-to-exemplar](../third_party/mikubaka88/CCFA-Skills/ccf-paper-to-exemplar/SKILL.md) | 从完整来源提炼写作动作，保留页码定位和禁止复制科研内容的边界 | 保留 Agent 分析流程和卡片结构；转换脚本只提供提取和含占位符的卡片骨架，不能视为自动完成写作分析 |
+| [ccf-rebuttal-writer](../third_party/mikubaka88/CCFA-Skills/ccf-rebuttal-writer/SKILL.md) | 将审稿意见、回复承诺、修改位置及证据放入同一返修记录 | 只有实际修改可标完成；不由回复文字推定实验或修改已发生 |
+| [ccf-submission-checker](../third_party/mikubaka88/CCFA-Skills/ccf-submission-checker/SKILL.md) | 区分格式、构建、材料交付；用通过／失败／不适用／未核验表述检查结果 | 仅保留检查方法，不认可随附模板及具体投稿政策的正确性或时效性 |
+| [ccf-common](../third_party/mikubaka88/CCFA-Skills/ccf-common/SKILL.md) | 上述模块的共享依赖：范围、证据、产物位置及交接责任 | 保留适用的通用约束；跨模块路由不意味着未审模块也已入库；固定出版来源排除策略不作为团队文献标准 |
+| [ccf-humanization](../third_party/mikubaka88/CCFA-Skills/ccf-humanization/SKILL.md) | 上述模块的共享依赖：保持事实与不确定性，减少空泛表达，避免机械删掉限定语 | 保留证据忠实和上下文判断；破折号数量、句式和作者主语偏好不作为通用质量门槛 |
 
-## 正文组织与段落改写
+其余九个 Skill、具体会议指南、LaTeX 模板和未读参考材料不随本次审查通过。未审内容与明确不采用的默认策略分别见[审查记录](reviews/ccfa-skills.md)。上游文件保持原样；保留范围由本表和审查记录限定。
 
-上游：[Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)。
-
-- [research-paper-writing/SKILL.md](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/SKILL.md)
-
-## 写作与完整性审查参考
-
-上游：[mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills)。
-
-- [ccf-paper-writer/SKILL.md](../third_party/mikubaka88/CCFA-Skills/ccf-paper-writer/SKILL.md)
-- [ccf-paper-reviewer/SKILL.md](../third_party/mikubaka88/CCFA-Skills/ccf-paper-reviewer/SKILL.md)
-- [ccf-integrity-auditor/SKILL.md](../third_party/mikubaka88/CCFA-Skills/ccf-integrity-auditor/SKILL.md)
-- [ccf-paper-to-exemplar/SKILL.md](../third_party/mikubaka88/CCFA-Skills/ccf-paper-to-exemplar/SKILL.md)
-
-## 跨学科写作规则
-
-上游：[K-Dense-AI/claude-scientific-writer](https://github.com/K-Dense-AI/claude-scientific-writer)。
-
-- [skills/scientific-writing/SKILL.md](../third_party/K-Dense-AI/claude-scientific-writer/skills/scientific-writing/SKILL.md)
-
-## 稿件修订与审稿规则
-
-上游：[WenyuChiou/academic-writing-skills](https://github.com/WenyuChiou/academic-writing-skills)。
-
-- [skills/academic-writing-skills/SKILL.md](../third_party/WenyuChiou/academic-writing-skills/skills/academic-writing-skills/SKILL.md)
-- [skills/paper-review/SKILL.md](../third_party/WenyuChiou/academic-writing-skills/skills/paper-review/SKILL.md)
-
-## 引用、数值、主张与投稿前核验
-
-上游：[ShaishavMaisuria/research-paper-lifecycle-skills](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills)。
-
-- [skills/verify-citations/SKILL.md](../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/verify-citations/SKILL.md)
-- [skills/verify-results/SKILL.md](../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/verify-results/SKILL.md)
-- [skills/verify-claims/SKILL.md](../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/verify-claims/SKILL.md)
-- [skills/preflight-check/SKILL.md](../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/preflight-check/SKILL.md)
-
-## 数值证据映射
-
-上游：[jin-s13/ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill)。
-
-- [references/numeric-evidence.md](../third_party/jin-s13/ai-research-writing-skill/references/numeric-evidence.md)
-- [references/numeric-evidence.schema.json](../third_party/jin-s13/ai-research-writing-skill/references/numeric-evidence.schema.json)
-- [scripts/check_numeric_evidence.py](../third_party/jin-s13/ai-research-writing-skill/scripts/check_numeric_evidence.py)
-
-## 引用锁与构建记录
-
-上游：[jin-s13/ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill)。
-
-- [scripts/check_citation_lock.py](../third_party/jin-s13/ai-research-writing-skill/scripts/check_citation_lock.py)
-- [scripts/verify_citations.py](../third_party/jin-s13/ai-research-writing-skill/scripts/verify_citations.py)
-- [scripts/record_build.py](../third_party/jin-s13/ai-research-writing-skill/scripts/record_build.py)
-
-## Git diff 增量审稿与论文／实现对照
-
-上游：[Rezenders/scientific_writing_agent](https://github.com/Rezenders/scientific_writing_agent)。
-
-- [.agents/skills/diff-review/SKILL.md](../third_party/Rezenders/scientific_writing_agent/.agents/skills/diff-review/SKILL.md)
-- [.agents/skills/technical-paragraph-rewrite/SKILL.md](../third_party/Rezenders/scientific_writing_agent/.agents/skills/technical-paragraph-rewrite/SKILL.md)
-
-## 论文精读与参考文献元数据核验
-
-上游：[Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)。
-
-- [skills/nature-paper-xray/SKILL.md](../third_party/Yuan1z0825/nature-skills/skills/nature-paper-xray/SKILL.md)
-- [skills/nature-ref-verifier/SKILL.md](../third_party/Yuan1z0825/nature-skills/skills/nature-ref-verifier/SKILL.md)
-
-## 数据图制作与检查
-
-上游：[Haojae/scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill)。
-
-- [SKILL.md](../third_party/Haojae/scipilot-figure-skill/SKILL.md)
-- [scripts/profile_data.py](../third_party/Haojae/scipilot-figure-skill/scripts/profile_data.py)
-- [scripts/check_figure.py](../third_party/Haojae/scipilot-figure-skill/scripts/check_figure.py)
-- [scripts/visual_qa.py](../third_party/Haojae/scipilot-figure-skill/scripts/visual_qa.py)
-
-## 上游自动实验结果的审计交接参考
-
-上游：[wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)。
-
-- [skills/experiment-audit/SKILL.md](../third_party/wanshuiyin/Auto-claude-code-research-in-sleep/skills/experiment-audit/SKILL.md)
-- [skills/citation-audit/SKILL.md](../third_party/wanshuiyin/Auto-claude-code-research-in-sleep/skills/citation-audit/SKILL.md)
-
-## ML 与系统论文写作参考
-
-上游：[Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs)。
-
-- [20-ml-paper-writing/ml-paper-writing/SKILL.md](../third_party/Orchestra-Research/AI-Research-SKILLs/20-ml-paper-writing/ml-paper-writing/SKILL.md)
-- [20-ml-paper-writing/systems-paper-writing/SKILL.md](../third_party/Orchestra-Research/AI-Research-SKILLs/20-ml-paper-writing/systems-paper-writing/SKILL.md)
+全部已接收材料的定位线索见[接收模块线索](RECEIVED_MODULES.md)，处理历史见[变更记录](CHANGELOG.md)。本表由维护者直接更新。

@@ -17,6 +17,7 @@
 - 新增前查看 [资源变更记录](resources/CHANGELOG.md)；删改时记录具体原因，避免重复引入曾排除的资源。恢复时追加新依据，保留旧记录。
 - 质量检查只做静态分析，不实际运行候选资源。完成一次完整维护后，将相关修改和记录一并提交到本地 Git，不捎带无关改动。
 - `third_party/` 使用 Git submodule 管理上游资源；不要在资源整理任务中直接修改上游源码。
-- `resources/repositories.json` 是资源维护脚本的输入。变更后重新生成索引并运行 `scripts/verify_resources.py`。
+- `resources/CATALOG.md` 和 `resources/MODULES.md` 手工记录已入库范围；待审候选不作为已有入库资源参与重合判断。
+- `resources/repositories.json` 和 `resources/modules.json` 是已接收材料的脚本输入。变更后重新生成 `resources/RECEIVED.md` 与 `resources/RECEIVED_MODULES.md`，并运行 `scripts/verify_resources.py`；生成脚本不改写入库记录。
 - 下载资源不等于启用 Skill。根据实际任务选择模块，再阅读其规则和依赖。
 - Windows 环境使用 PowerShell；文本使用 UTF-8 编码。

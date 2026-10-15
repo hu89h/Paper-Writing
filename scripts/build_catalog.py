@@ -1,4 +1,4 @@
-"""Generate human-readable indexes from the locally verified resource inventory."""
+"""Generate received-material indexes; admission records are maintained in Markdown."""
 from pathlib import Path
 import json
 import urllib.parse
@@ -51,11 +51,11 @@ def main():
     classified = {name for entries in groups.values() for name in entries}
     if set(repos) - classified:
         groups['未分类'] = {name: '待整理说明' for name in sorted(set(repos) - classified)}
-    lines = ['# 通用论文写作资源索引', '',
+    lines = ['# 已接收仓库清单', '',
              f'收集范围：{len(repos)} 个上游仓库。文件列表来自本地源码；来源链接已通过 GitHub API 和实际克隆核对。', '',
              '分类和用途是导航摘要，不构成功能效果排名。`SKILL.md` 数量是跟踪文件数，可能包含重复打包的同一 Skill，不等于独立能力数量。', '',
              '上游链接与完整文件清单见 [repositories.json](repositories.json)。', '',
-             '此页列出已接收材料，不代表已经通过入库审查。审查结论与保留范围以 [资源变更记录](CHANGELOG.md) 中的最新记录为准；没有记录的资源视为未审查。', '']
+             '此页由脚本生成，只记录已接收材料；正式保留范围见 [已入库资源](CATALOG.md)，处理历史见 [资源变更记录](CHANGELOG.md)。未入库材料的当前状态以变更记录中最新有效结论为准；没有有效结论的资源为待审候选。', '']
     for title, entries in groups.items():
         if not entries:
             continue
@@ -68,11 +68,11 @@ def main():
               '- 所有仓库均已下载并注册为 Git submodule；未安装依赖、未启用 Skill、未执行上游代码。',
               '- 采用浅克隆；未递归初始化上游子模块，Git LFS 内容可能仍是指针文件。',
               '- 资源尚未经过统一写作任务、核验准确率或运行效果测试。',
-              '- 两个不同 owner 的 `research-writing-skill` 均保留，避免把同名项目误合并。', '']
-    (ROOT / 'resources/CATALOG.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
+              '- 两个不同 owner 的 `research-writing-skill` 均在接收清单中，未因同名而合并。', '']
+    (ROOT / 'resources/RECEIVED.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
     modules = json.loads((ROOT / 'resources/modules.json').read_text(encoding='utf-8'))
-    lines = ['# 重点模块入口', '',
-             '以下模块入口已核对本地文件存在。是否通过静态审查及保留范围见 [资源变更记录](CHANGELOG.md)；没有记录的条目视为待审查。本索引不表示功能或实际效果已经验证。', '',
+    lines = ['# 已接收材料的模块线索', '',
+             '以下入口仅核对本地文件存在，供定位待审内容，不表示已入库。通过审查的内容与边界见 [已入库模块](MODULES.md)，处理历史见 [资源变更记录](CHANGELOG.md)。', '',
              '脚本入口只提供定位；运行前阅读其输入约定、依赖与副作用。引用元数据核验与“原文是否支持当前主张”是不同任务，需分别验证。', '']
     for module in modules:
         item = repos[module['repo']]
@@ -82,8 +82,8 @@ def main():
             assert (ROOT / full).is_file(), full
             lines.append(f'- [{path}]({relative_link(full)})')
         lines.append('')
-    (ROOT / 'resources/MODULES.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
-    print(f'Generated CATALOG.md and MODULES.md: {len(repos)} repositories, {len(modules)} module groups.')
+    (ROOT / 'resources/RECEIVED_MODULES.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
+    print(f'Generated RECEIVED.md and RECEIVED_MODULES.md: {len(repos)} repositories, {len(modules)} module groups.')
 
 
 if __name__ == '__main__':

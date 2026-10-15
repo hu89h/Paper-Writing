@@ -9,3 +9,5 @@
 | 日期 | 资源名称及来源链接 | 操作 | 说明／原因 | 依据或替代资源 |
 | --- | --- | --- | --- | --- |
 | 2026-10-15 | [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 排除 | 不作为通用论文引文核验资源保留：数值规则过严且存在规则冲突，schema 未覆盖正文状态；核心核查思路与已有内容重合。从重点模块入口移除，原始仓库仍作为已接收材料保留。 | [静态审查及对照依据](reviews/citation-check-skill.md)。上游协调规则、补齐 schema 并提供明确增量后可重新审查。 |
+| 2026-10-15 | [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) | 撤销排除，恢复待审 | 上条决定将未入库候选作为已有覆盖，比较基准不成立。保留原始质量发现供后续核查，恢复接收材料的入口线索；此次不作正式质量判定，也不入库。 | [原分析及当前状态](reviews/citation-check-skill.md)。原排除记录保留，但不再有效。 |
+| 2026-10-15 | [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) | 首次入库，部分保留 | 作为首个入库资源，保留六个写作相关模块的流程规范和两个共享依赖的适用规则。价值在于写作与审查分工、证据映射、范例提炼和返修闭环；不整体采用其科研框架。当前无已入库比较对象，重合检查不适用。 | [审查依据与排除边界](reviews/ccfa-skills.md)、[入库模块](MODULES.md)。模板、具体投稿政策及其余模块不随本次通过；未运行或启用候选资源。 |

@@ -1,59 +1,11 @@
-# 通用论文写作资源索引
+# 已入库资源
 
-收集范围：23 个上游仓库。文件列表来自本地源码；来源链接已通过 GitHub API 和实际克隆核对。
+只登记通过静态审查的保留范围。入库不表示已运行、已启用 Skill 或已验证写作效果。
 
-分类和用途是导航摘要，不构成功能效果排名。`SKILL.md` 数量是跟踪文件数，可能包含重复打包的同一 Skill，不等于独立能力数量。
+| 资源及来源 | 结论 | 作用与保留理由 | 范围及依据 |
+| --- | --- | --- | --- |
+| [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) · [本地](../third_party/mikubaka88/CCFA-Skills/) | 部分保留；2026-10-15 | 提供正文写作、独立审稿、主张／数字／引文证据核验、写作范例提炼、返修与投稿检查的流程参考；分工、证据边界和修改追踪有具体规范 | 六个业务模块的流程规范及两个共享依赖的适用规则，见[模块与边界](MODULES.md)、[静态审查](reviews/ccfa-skills.md)；不整体采用框架或其默认策略 |
 
-上游链接与完整文件清单见 [repositories.json](repositories.json)。
+其他已接收仓库仍为待审候选，见[接收清单](RECEIVED.md)。删除、排除、恢复及结论变更的原因保留在[变更记录](CHANGELOG.md)。
 
-此页列出已接收材料，不代表已经通过入库审查。审查结论与保留范围以 [资源变更记录](CHANGELOG.md) 中的最新记录为准；没有记录的资源视为未审查。
-
-## 正文写作与审校
-
-| 仓库／本地入口 | 导航用途 | SKILL.md 文件数 |
-| --- | --- | ---: |
-| [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) · [本地](../third_party/Master-cai/Research-Paper-Writing-Skills) | 论文结构、段落逻辑与改写 | 1 |
-| [K-Dense-AI/claude-scientific-writer](https://github.com/K-Dense-AI/claude-scientific-writer) · [本地](../third_party/K-Dense-AI/claude-scientific-writer) | 跨学科科学写作工具及规则 | 78 |
-| [WenyuChiou/academic-writing-skills](https://github.com/WenyuChiou/academic-writing-skills) · [本地](../third_party/WenyuChiou/academic-writing-skills) | 学术写作、稿件修订与审稿 | 2 |
-| [Hiro-Inagawa/paper-audit-skill](https://github.com/Hiro-Inagawa/paper-audit-skill) · [本地](../third_party/Hiro-Inagawa/paper-audit-skill) | 论文审校规则 | 1 |
-| [Odinary-AI/research-writing-skill](https://github.com/Odinary-AI/research-writing-skill) · [本地](../third_party/Odinary-AI/research-writing-skill) | 通用学术写作流程 | 1 |
-| [PoseZhaoyutao/research-paper-writer-skill](https://github.com/PoseZhaoyutao/research-paper-writer-skill) · [本地](../third_party/PoseZhaoyutao/research-paper-writer-skill) | 论文写作与多角色工作流参考 | 2 |
-| [Norman-bury/research-writing-skill](https://github.com/Norman-bury/research-writing-skill) · [本地](../third_party/Norman-bury/research-writing-skill) | 模块化写作流程参考 | 20 |
-| [zLanqing/codex-claude-academic-skills](https://github.com/zLanqing/codex-claude-academic-skills) · [本地](../third_party/zLanqing/codex-claude-academic-skills) | 学术写作与配套工具参考 | 24 |
-
-## LaTeX、证据与稿件交付
-
-| 仓库／本地入口 | 导航用途 | SKILL.md 文件数 |
-| --- | --- | ---: |
-| [appautomaton/latex-arxiv-SKILL](https://github.com/appautomaton/latex-arxiv-SKILL) · [本地](../third_party/appautomaton/latex-arxiv-SKILL) | LaTeX 论文工作流，实际适用范围需按任务确认 | 4 |
-| [yunshenwuchuxun/latex-paper-skills](https://github.com/yunshenwuchuxun/latex-paper-skills) · [本地](../third_party/yunshenwuchuxun/latex-paper-skills) | LaTeX 写作与实验结果回填参考 | 9 |
-| [jin-s13/ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill) · [本地](../third_party/jin-s13/ai-research-writing-skill) | 数值证据、引用锁与构建记录 | 1 |
-| [ShaishavMaisuria/research-paper-lifecycle-skills](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills) · [本地](../third_party/ShaishavMaisuria/research-paper-lifecycle-skills) | 引用、结果、主张核验与稿件预检 | 42 |
-
-## 审稿、文献与图表专项
-
-| 仓库／本地入口 | 导航用途 | SKILL.md 文件数 |
-| --- | --- | ---: |
-| [Rezenders/scientific_writing_agent](https://github.com/Rezenders/scientific_writing_agent) · [本地](../third_party/Rezenders/scientific_writing_agent) | 增量审稿、技术段落与实现对照 | 16 |
-| [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) · [本地](../third_party/Yuan1z0825/nature-skills) | 论文精读、文献核验、写作与数据工具 | 23 |
-| [Haojae/scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill) · [本地](../third_party/Haojae/scipilot-figure-skill) | 科研数据图制作与检查 | 1 |
-| [serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill) · [本地](../third_party/serenakeyitan/citation-check-skill) | 引用核查提示词与 schema 参考 | 1 |
-
-## 完整科研框架与工具库（按模块参考）
-
-| 仓库／本地入口 | 导航用途 | SKILL.md 文件数 |
-| --- | --- | ---: |
-| [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) · [本地](../third_party/mikubaka88/CCFA-Skills) | 科研全流程与写作／审查模块 | 17 |
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [本地](../third_party/K-Dense-AI/scientific-agent-skills) | 跨学科科学工具库 | 177 |
-| [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) · [本地](../third_party/wanshuiyin/Auto-claude-code-research-in-sleep) | 自主科研与实验／论文审计参考 | 191 |
-| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) · [本地](../third_party/Orchestra-Research/AI-Research-SKILLs) | AI 研究工具与论文写作模块 | 98 |
-| [Galaxy-Dawn/claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) · [本地](../third_party/Galaxy-Dawn/claude-scholar) | 文献管理、知识库与科研工作流 | 45 |
-| [WUBING2023/PaperSpine](https://github.com/WUBING2023/PaperSpine) · [本地](../third_party/WUBING2023/PaperSpine) | 完整论文生产工作台 | 7 |
-| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) · [本地](../third_party/brycewang-stanford/Auto-Empirical-Research-Skills) | 大型实证研究方法与工具汇编 | 1172 |
-
-## 获取与使用状态
-
-- 所有仓库均已下载并注册为 Git submodule；未安装依赖、未启用 Skill、未执行上游代码。
-- 采用浅克隆；未递归初始化上游子模块，Git LFS 内容可能仍是指针文件。
-- 资源尚未经过统一写作任务、核验准确率或运行效果测试。
-- 两个不同 owner 的 `research-writing-skill` 均保留，避免把同名项目误合并。
+本目录由维护者直接更新；生成接收索引不会覆盖此文件。
