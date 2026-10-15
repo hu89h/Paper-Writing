@@ -4,7 +4,8 @@
 
 ## 资料入口
 
-- [资源调研工作流](workflows/resource-curation/WORKFLOW.md)：搜集、整理、汇总、筛选与价值判定的执行规范、产物模板和复核路径。
+- [资源入库与维护工作流](workflows/resource-curation/WORKFLOW.md)：搜集、静态质量检查、入库及后续删改的工作约定。
+- [资源变更记录](resources/CHANGELOG.md)：入库、修改、删除、排除和恢复的原因与依据。
 - [资源分类索引](resources/CATALOG.md)：23 个仓库的用途与入口。
 - [重点模块索引](resources/MODULES.md)：写作、数值证据、引用核验、增量审稿、绘图等具体文件位置。
 - [机器可读清单](resources/repositories.json)：上游 URL、获取状态及全部 `SKILL.md` 路径。
@@ -51,6 +52,6 @@ python -X utf8 scripts/verify_resources.py
 
 ## 资源使用
 
-评估工具时，使用相同论文、输入事实和预算比较实际产出。
+资源质量与重合度通过静态阅读检查，不实际运行候选资源。
 
 本地材料放在 `.local/`，该目录由 Git 忽略，不参与共享。
