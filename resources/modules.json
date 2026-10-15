@@ -10,6 +10,5 @@
   {"task":"论文精读与参考文献元数据核验","repo":"Yuan1z0825/nature-skills","paths":["skills/nature-paper-xray/SKILL.md","skills/nature-ref-verifier/SKILL.md"]},
   {"task":"数据图制作与检查","repo":"Haojae/scipilot-figure-skill","paths":["SKILL.md","scripts/profile_data.py","scripts/check_figure.py","scripts/visual_qa.py"]},
   {"task":"上游自动实验结果的审计交接参考","repo":"wanshuiyin/Auto-claude-code-research-in-sleep","paths":["skills/experiment-audit/SKILL.md","skills/citation-audit/SKILL.md"]},
-  {"task":"引用核查提示词参考","repo":"serenakeyitan/citation-check-skill","paths":["SKILL.md","references/citation_schema.json"]},
   {"task":"ML 与系统论文写作参考","repo":"Orchestra-Research/AI-Research-SKILLs","paths":["20-ml-paper-writing/ml-paper-writing/SKILL.md","20-ml-paper-writing/systems-paper-writing/SKILL.md"]}
 ]

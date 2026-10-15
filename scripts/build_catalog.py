@@ -46,12 +46,19 @@ def relative_link(path):
 def main():
     data = json.loads((ROOT / 'resources/repositories.json').read_text(encoding='utf-8'))
     repos = {item['name']: item for item in data['repositories']}
-    assert set(repos) == {name for group in GROUPS.values() for name in group}, 'Catalog grouping must cover exactly the collected resources'
+    groups = {title: {name: purpose for name, purpose in entries.items() if name in repos}
+              for title, entries in GROUPS.items()}
+    classified = {name for entries in groups.values() for name in entries}
+    if set(repos) - classified:
+        groups['未分类'] = {name: '待整理说明' for name in sorted(set(repos) - classified)}
     lines = ['# 通用论文写作资源索引', '',
              f'收集范围：{len(repos)} 个上游仓库。文件列表来自本地源码；来源链接已通过 GitHub API 和实际克隆核对。', '',
              '分类和用途是导航摘要，不构成功能效果排名。`SKILL.md` 数量是跟踪文件数，可能包含重复打包的同一 Skill，不等于独立能力数量。', '',
-             '上游链接与完整文件清单见 [repositories.json](repositories.json)。', '']
-    for title, entries in GROUPS.items():
+             '上游链接与完整文件清单见 [repositories.json](repositories.json)。', '',
+             '此页列出已接收材料，不代表已经通过入库审查。审查结论与保留范围以 [资源变更记录](CHANGELOG.md) 中的最新记录为准；没有记录的资源视为未审查。', '']
+    for title, entries in groups.items():
+        if not entries:
+            continue
         lines += ['## ' + title, '', '| 仓库／本地入口 | 导航用途 | SKILL.md 文件数 |', '| --- | --- | ---: |']
         for name, purpose in entries.items():
             item = repos[name]
@@ -65,7 +72,7 @@ def main():
     (ROOT / 'resources/CATALOG.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
     modules = json.loads((ROOT / 'resources/modules.json').read_text(encoding='utf-8'))
     lines = ['# 重点模块入口', '',
-             '以下模块入口已核对本地文件存在，尚未进行功能测试。按具体任务选择所需模块。', '',
+             '以下模块入口已核对本地文件存在。是否通过静态审查及保留范围见 [资源变更记录](CHANGELOG.md)；没有记录的条目视为待审查。本索引不表示功能或实际效果已经验证。', '',
              '脚本入口只提供定位；运行前阅读其输入约定、依赖与副作用。引用元数据核验与“原文是否支持当前主张”是不同任务，需分别验证。', '']
     for module in modules:
         item = repos[module['repo']]

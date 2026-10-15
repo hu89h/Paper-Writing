@@ -1,6 +1,6 @@
 # 重点模块入口
 
-以下模块入口已核对本地文件存在，尚未进行功能测试。按具体任务选择所需模块。
+以下模块入口已核对本地文件存在。是否通过静态审查及保留范围见 [资源变更记录](CHANGELOG.md)；没有记录的条目视为待审查。本索引不表示功能或实际效果已经验证。
 
 脚本入口只提供定位；运行前阅读其输入约定、依赖与副作用。引用元数据核验与“原文是否支持当前主张”是不同任务，需分别验证。
 
@@ -86,13 +86,6 @@
 
 - [skills/experiment-audit/SKILL.md](../third_party/wanshuiyin/Auto-claude-code-research-in-sleep/skills/experiment-audit/SKILL.md)
 - [skills/citation-audit/SKILL.md](../third_party/wanshuiyin/Auto-claude-code-research-in-sleep/skills/citation-audit/SKILL.md)
-
-## 引用核查提示词参考
-
-上游：[serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill)。
-
-- [SKILL.md](../third_party/serenakeyitan/citation-check-skill/SKILL.md)
-- [references/citation_schema.json](../third_party/serenakeyitan/citation-check-skill/references/citation_schema.json)
 
 ## ML 与系统论文写作参考
 
