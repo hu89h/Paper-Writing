@@ -1,50 +1,42 @@
 # citation-check-skill 静态审查
 
-- 资源：[serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill)
-- 日期：2026-10-15
-- 当前状态：**待正式审查**。2026-10-15 的排除结论已撤销：当时没有已入库资源，不能将其他待审候选的覆盖作为已有替代依据。以下保留静态发现和候选间对照，不作为有效排除决定。
-- 阅读范围：完整阅读当前工作区的 README、`SKILL.md` 和 `references/citation_schema.json`；未运行候选资源，未调用其核验流程。
-- 历史检查：审查前的变更表中没有该资源的排除、删除或恢复记录。
+- 来源：[serenakeyitan/citation-check-skill](https://github.com/serenakeyitan/citation-check-skill)；[本地](../../third_party/serenakeyitan/citation-check-skill/)。
+- 日期：2026-10-15；当前结论：**不保留为团队论文核验资源**。
+- 历史：先前排除决定曾因误将待审候选当作已有覆盖而撤销，恢复待审。此次重新核对自身质量，以现已入库的范围比较，形成新的正式决定；不覆盖历史变更记录。
+- 本次比较基准：CCFA、Master-cai 和 jin-s13 已明确入库的范围；没有把其他待审候选用作现成替代。
+- 完整阅读当前本地 README、`SKILL.md` 与 `references/citation_schema.json`，核对跟踪文件列表；只做静态分析，没有执行资源或联网核验其示例。
 
-## 内容与可取之处
+## 内容与自身质量
 
-该仓库提供引文和事实核查提示词，以及以幻灯片为中心的输出 schema。流程包括先提取主张再逐条核验、联网核查和限定文档核查两种模式、来源定位和报告格式。
+该仓库提供两阶段的主张提取／核查提示词、联网与限定文档两种模式、图表核查提示及面向幻灯片的 JSON schema。先定位主张再核查、区分书目真实与句子支持关系、保留来源位置，均有参考价值。
 
-先提取主张再核查、区分来源存在与来源支持主张、在报告中保留出处，均有参考价值。依据为 [SKILL.md](../../third_party/serenakeyitan/citation-check-skill/SKILL.md) 的 `Two-Pass Architecture`、`Status Decision Tree` 和 `Output Format`。
+以下位置按章节定位，避免将易随上游更新漂移的行号作为唯一依据。
 
-在当前仓库的跟踪文件列表中，未发现配套核验执行脚本或测试文件。因此，其“相同输入得到相同输出”的表述属于设计目标，不能仅凭这些提示词认定已经实现确定性验证。
-
-## 自身质量检查
-
-以下行号对应当前工作区文件，用于定位原文。
-
-| 发现 | 原文位置 | 对本项目的影响 |
+| 源码事实 | 原文位置 | 判断及后果 |
 | --- | --- | --- |
-| 数值规则把任意舍入和有效位数变化判为错误，后面的近似值规则又接受一定偏差 | `SKILL.md` L159–194、L318 | 没有按具体指标和表达精度确定容差，规则优先级也不清楚，不宜作为通用论文核验标准 |
-| 主张提取排除方法描述，示例是所用软件版本 | `SKILL.md` L75–85 | 论文的方法、软件版本和实验设置本身也可能是需要核对的事实；不能把该排除表直接用于整篇论文审计 |
-| 仅有二手来源时，一处要求未核验，另一处允许两个独立二手来源通过；来源冲突时也同时存在“未核验”和“采用最新来源”的要求 | `SKILL.md` L278–318 | 对相同情形存在不同处理指示，与其减少判断分歧的目标不一致 |
-| 正文定义多种结果，但 JSON schema 的 claim status 仅允许四种 | `SKILL.md` L115–121、L155、L402–404；[citation_schema.json](../../third_party/serenakeyitan/citation-check-skill/references/citation_schema.json) L62–65 | `Numerical Error`、`Citation Not Found`、`Misquoted`、`Not in Source` 等没有对应枚举或明确映射，结构化输出约定不完整 |
-| schema 主要围绕 slides，而资源描述同时覆盖论文、PDF 和报告 | `citation_schema.json` L6、L39–47 | 对通用论文场景需要另外适配；不能把该 schema 直接视为通用稿件核验格式 |
+| 只提取规定的主张类型，明确不提取方法描述，例子是所用 PyTorch 版本 | [SKILL](../../third_party/serenakeyitan/citation-check-skill/SKILL.md) 的 `Claim Extraction Rules` | 方法、软件版本及设置也可能是应核对事实，不能将该提取范围作为完整论文审计范围 |
+| 任意舍入、截断、有效位数变化均判错；百分数与等价小数被列为单位不匹配；近似表达又允许来源值的 ±10% | 同文件 `Numerical Precision Rules`、`Tie-Breaker Rules` | 没有结合指标、单位换算及报告精度给出可用的通用判定规则，近似例外与严格规则的优先级不清楚 |
+| 只有 Rank 5–6 二手来源时要求未核验；另一表允许至少两个独立二手来源一致即通过 | `Source Authority Hierarchy` 对照 `Multi-Source Verification` | 同类输入存在互不一致的操作指示，与确定性判定的设计目标不符 |
+| 来源冲突时一处要求未核验，另一处要求采用最新权威来源 | `Multi-Source Verification` 对照 `Tie-Breaker Rules` | 缺少冲突时的优先级和可比性判据，不能仅按年份推定哪个结论适用于原主张 |
+| 正文判定包括 Numerical Error、Citation Not Found、Misquoted、Not in Source，schema 的 status 只有 verified、unverified、hallucination、misleading | [SKILL](../../third_party/serenakeyitan/citation-check-skill/SKILL.md) 的 `Status Decision Tree`、`Output Format Options`；[schema](../../third_party/serenakeyitan/citation-check-skill/references/citation_schema.json) 的 `slides.items.properties.claims.items.properties.status` | JSON 模式缺少明确映射，输出接口与规则不闭合；这是可由静态材料直接核对的缺陷 |
+| schema 围绕 slides、slide_number 和 presentation_title，README 同时宣称覆盖研究论文、报告及 PDF | 同一 schema 与 README 的 `What it does` | 论文适配需要额外设计，不能把现成 schema 视为通用稿件核验格式 |
+| 跟踪文件仅有 README、SKILL、schema 等文档，没有配套核验执行脚本或测试 | 跟踪文件列表；SKILL 的 `Design principle` | “相同输入相同输出”是作者目标，未由实现或结果证明；也不能由缺少代码反推出提示词一定无效 |
 
-这些是静态规则与接口层面的发现，不是运行失败率或写作效果测试结果。
+这些问题涉及核心提取范围、判定规则和输出接口，足以独立支持此次不保留决定，不依赖“其他库已经做过”这一理由。
 
-## 候选材料间对照（非入库比较）
+## 与当前已入库内容的对照
 
-比较范围限定为以下已有内容，并非对全部资源做完整审查。对照内容本身也未因此自动获得入库通过结论。
-
-| 能力 | 已有对照内容 | 对比结论 |
+| 比较点 | 已入库依据 | 共同内容、区别及处理 |
 | --- | --- | --- |
-| 主张、数字、引文身份及上下文支持核验 | [CCFA integrity auditor](../../third_party/mikubaka88/CCFA-Skills/ccf-integrity-auditor/SKILL.md)，`Core Rule`、`Modes`、`Workflow` | 已提供主张—证据矩阵和多类一致性检查；还明确区分不可比较与不一致，核心问题范围重合 |
-| 提取候选主张并整理证据矩阵 | [lifecycle verify-claims](../../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/verify-claims/SKILL.md)，`Process`、`Hard rules` | 已有候选提取、定位、证据映射与状态区分，并明确脚本提取不等于判定真伪；查阅了脚本头部说明和函数位置，未运行或完整验证脚本 |
-| 引用记录是否真实、元数据是否匹配 | [lifecycle verify-citations](../../third_party/ShaishavMaisuria/research-paper-lifecycle-skills/skills/verify-citations/SKILL.md)，`Inputs`、`Process`、`Hard rules` | 存在专门的书目核验规范和配套脚本，但这只说明已有同类材料，不代表该工具已经验证可用，也不等于核验句子支持关系 |
+| 重要主张、数值与引文上下文核对 | [CCFA integrity auditor](../../third_party/mikubaka88/CCFA-Skills/ccf-integrity-auditor/SKILL.md) 的 `Core Rule`、`Modes`、`Workflow` | 已有证据矩阵、数值口径及身份／支持关系分离的检查方法。候选的逐页文档索引和视觉检查更具体，但没有证明这些细节已被全部覆盖，不用“完全重复”作为排除理由 |
+| 数字来源及聚合重算 | [jin-s13 保留范围](ai-research-writing-skill.md) | jin-s13 提供来源重算设计，同时本库已明确否定其数字集合匹配能证明语义正确；该已知缺陷不被隐藏，也不因两者同属核验就判定可直接替代 |
+| 局部写作检查 | [Master-cai 保留范围](research-paper-writing-skills.md) | 不承担 citation-check 的完整核验功能，不作为其替代依据 |
 
-候选资源的限定文档页码索引、幻灯片视觉检查提示和报告布局具有不同侧重。原分析没有证明这些内容在所有材料中都被覆盖；其中“独立增量不足以抵消质量问题”的判断不再作为有效入库决定，需在正式审查时重新判断。
+候选中有益的普通核查思路与现有规范重合，其文档索引、两阶段提取和报告布局仍有不同侧重。本次没有选择拆出这些局部建议新增专项条目：其增量不足以支持承担核心规则和格式修订的维护成本。这是范围与价值判断，不是断言其没有任何独特内容。
 
-## 原处理决定及边界（已撤销）
+## 决定与后续处理
 
-- 从重点模块入口中移除，避免被误当作已筛选的通用核验资源。
-- 原始仓库继续作为已接收材料留在本地收集清单中，记录排除原因；不修改上游文件。
-- 现有对照项只作为后续审查的相关对象，不将它们宣称为实测更好的替代工具。
-- 若上游协调数值与来源判定规则、补齐状态 schema，并体现明确的独立价值，可以重新审查；恢复时保留本次原因。
-
-关键问题在完整读完候选文件后重新核对了一遍，属于单个 Agent 的静态复核，不是独立评审或运行验证。
+- 不在已入库资源和模块表登记；原始仓库继续在接收材料清单中，避免为了记录排除而删除源码。
+- 在[变更记录](../CHANGELOG.md)追加正式排除原因，并保留先前决定及撤销记录；日后再次收到此来源先查最新有效记录。
+- 重新考虑的条件：协调来源和数值判定规则，明确适合论文的提取范围，补齐状态映射与输出契约；或提供可独立保留的专项内容及其价值依据。届时只复核受影响部分，不要求重新搜集资源。
+- 这是同一 Agent 的静态复核，没有运行准确率、确定性或跨模型效果验证。
