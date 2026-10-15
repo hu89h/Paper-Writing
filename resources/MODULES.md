@@ -26,7 +26,7 @@
 | [Paragraph Clarity Check](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/SKILL.md#paragraph-clarity-check-important) 与 [flow 参考](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/does-my-writing-flow-source.md) | 读者视角检查术语和衔接；反向列出全文论点、段落主旨与支撑证据，检查对应关系 | 仅保留这一小节及参考方法；第一句主旨等是修订建议，不将全份 Skill 的输出规则一起采用 |
 | [Method 指南](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/method.md) 与 [overview 模板](../third_party/Master-cai/Research-Paper-Writing-Skills/research-paper-writing/references/examples/method/overview-template.md) | 模块化方法的分步起草、动机／设计／优势检查，overview 的设置与章节导航示例 | 与 CCFA 有覆盖重合，保留操作粒度与示例；适用 ML/CV 等模块化方法，示例科研事实和引用不可直接复用 |
 
-其余范围未通过本次审查；其中默认附加整套报告、通用实证接收判断和 novelty 叙述规则不作为团队标准。
+其余分节指南和未读例库仍未审查；默认附加整套报告、通用实证接收判断和 novelty 叙述规则明确不采用为团队标准。
 
 ## ai-research-writing-skill
 
